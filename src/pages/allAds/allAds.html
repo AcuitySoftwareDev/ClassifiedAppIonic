@@ -1,0 +1,35 @@
+<ion-content>
+    <div class="container">
+        <ion-card>
+            <ion-card-header style="text-align: center;font-weight: bolder">
+                All Ads
+            </ion-card-header>
+        </ion-card>
+        <div class="allads" *ngFor="let a of ads;" style="border-bottom: 4px solid black;margin-top: 7px">
+
+            <img src="{{a.image}}" width="100px" height="100px">
+
+            <table style=" float: right;font-size: 17px;">
+                <tr>
+                    <td>Name:</td>
+                    <td><b>{{a.name}}</b></td>
+                </tr>
+                <tr>
+                    <td>Rs: </td>
+                    <td><b>{{a.rs}}</b></td>
+                </tr>
+                <tr>
+                    <td>Model:</td>
+                    <td> <b>{{a.model}}</b></td>
+                </tr>
+                <tr>
+                    <td>Address: </td>
+                    <td><b>{{a.address}}</b></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+</ion-content>

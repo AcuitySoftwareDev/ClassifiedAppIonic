@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center">TodoApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-image: url('../../assets/icon/iphone-3.jpg')">
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Add a task</ion-label>
+      <ion-input #name type="text"></ion-input>
+    </ion-item>
+    <div style="text-align: center">
+      <button (click)="onSubmit(name.value)" ion-button round>Submit</button>
+    </div>
+  </ion-list>
+  <ion-card *ngFor="let list of lists | async;let i = index">
+
+    <ion-card-content>
+      <!-- Add card content here! -->
+      <p>{{list.value}}
+        <button (click)="delete(list)" ion-button color="danger" round style="float: right">Delete</button>
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,95 @@
+<div class="container">
+    <div style="margin-top:20px">
+        <img src="../../assets/icon/download.jpg" (click)="showCarFields()">
+        <img src="../../assets/icon/images.png" (click)=" showMobileFields()">
+    </div>
+
+    <div style="width:400px;margin-top:30px;background-color:white;" *ngIf="carDetails === true">
+        <ion-card>
+            <ion-card-content>
+
+
+                <table align="center" cellspacing="0">
+                    <tr>
+                        <td>
+                            <input placeholder="Car Name" style="width: 100%" #name>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Car Price" #rs>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Car Model" #model>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Address" #address>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input (change)="abc($event)" type="file" id="fileButton">
+                        </td>
+                    </tr>
+
+                </table>
+
+
+                <button style="margin-left:130px;margin-top:20px;background-color:	#F5F5F5" (click)="carsSubmit(name.value,rs.value,model.value,address.value)">Submit</button>
+
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+
+
+    <!--MobileForm-->
+
+    <div style="width:400px;margin-top:30px;background-color:white;" *ngIf="mobileDetails === true">
+        <ion-card>
+            <ion-card-content>
+
+
+                <table align="center" cellspacing="0">
+                    <tr>
+                        <td>
+                            <input placeholder="Mobile Name" style="width: 100%" #name>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Mobile Price" #rs>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Mobile Model" #model>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            <input style="width:100%" placeholder="Address" #address>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td style="padding-top:10px">
+                            <input type="file" style="width:100%" id="image" #image>
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td style="padding-top:10px">
+                            <!--<progress value="0" max="100" id="uploader">0%</progress>-->
+                            <input (change)="abc($event)" type="file" id="fileButton">
+                        </td>
+                    </tr>
+
+                </table>
+                <button style="margin-left:130px;margin-top:20px;background-color:	#F5F5F5" (click)="mobilesSubmit(name.value,rs.value,model.value,address.value)">Submit</button>
+            </ion-card-content>
+        </ion-card>
+
+    </div>
